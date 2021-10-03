@@ -1,43 +1,53 @@
-// trait
-trait Tweet {
-    fn tweet(&self);
+// // trait
+// trait Tweet {
+//     fn tweet(&self);
 
-    fn tweet_twice(&self) {
-        self.tweet();
-        self.tweet();
-    }
+//     fn tweet_twice(&self) {
+//         self.tweet();
+//         self.tweet();
+//     }
 
-    fn shout(&self) {
-        println!("aaaaaaaaa")
-    }
+//     fn shout(&self) {
+//         println!("aaaaaaaaa")
+//     }
+// }
+
+// struct Dove;
+// struct Duck;
+
+// impl Tweet for Dove {
+//     fn tweet(&self) {
+//         println!("cool");
+//     }
+// }
+
+// impl Tweet for Duck {
+//     fn tweet(&self) {
+//         println!("aa");
+//     }
+// }
+
+
+// fn main() {
+//     let dove = Dove {};
+//     dove.tweet();
+//     dove.tweet_twice();
+//     dove.shout();
+//     let duck = Duck {};
+//     duck.tweet();
+//     duck.tweet_twice();
+//     duck.shout();
+
+
+//     println!("Hello, world!");
+// }
+
+// generics
+fn make_tuple<T, S>(t: T, s: S) -> (T, S) {
+    (t, s)
 }
-
-struct Dove;
-struct Duck;
-
-impl Tweet for Dove {
-    fn tweet(&self) {
-        println!("cool");
-    }
-}
-
-impl Tweet for Duck {
-    fn tweet(&self) {
-        println!("aa");
-    }
-}
-
 
 fn main() {
-    let dove = Dove {};
-    dove.tweet();
-    dove.tweet_twice();
-    dove.shout();
-    let duck = Duck {};
-    duck.tweet();
-    duck.tweet_twice();
-    duck.shout();
-
-
-    println!("Hello, world!");
+    make_tuple(1, 2);
+    make_tuple("foo", "bar");
 }
