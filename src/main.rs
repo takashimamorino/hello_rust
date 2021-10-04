@@ -1,3 +1,14 @@
+use hello_rust::module_a::Foo;
+use hello_rust::module_b::add;
+
+fn main() {
+    let foo = Foo{ a: 1, b: 2};
+    let bar = &foo;
+    println!("{}{}", bar.a, bar.b);
+    let a = add(1, 2);
+    println!("{}", a);
+}
+
 // // trait
 // trait Tweet {
 //     fn tweet(&self);
@@ -43,11 +54,11 @@
 // }
 
 // generics
-fn make_tuple<T, S>(t: T, s: S) -> (T, S) {
-    (t, s)
-}
+// fn make_tuple<T, S>(t: T, s: S) -> (T, S) {
+//     (t, s)
+// }
 
-fn main() {
-    make_tuple(1, 2);
-    make_tuple("foo", "bar");
-}
+// fn main() {
+//     make_tuple(1, 2);
+//     make_tuple("foo", "bar");
+// }
